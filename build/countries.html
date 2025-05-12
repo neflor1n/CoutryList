@@ -1,0 +1,1793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Country List</title>
+<style>
+body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 1rem; }
+.search-container { margin-bottom: 20px; }
+#searchInput { padding: 10px; width: 300px; border-radius: 5px; border: 1px solid #ddd; }
+.country { background: white; margin: 1rem 0; padding: 1rem; border-radius: 5px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+.country img { width: 100px; height: auto; border-radius: 5px; margin-right: 1rem; }
+.country h2 { margin: 0; }
+.hidden { display: none; }
+</style>
+</head>
+<body>
+<h1>Country List</h1>
+<div class="search-container">
+  <input type="text" id="searchInput" placeholder="Search by country or capital...">
+</div>
+<div id="countriesContainer">
+<div class="country" data-name="Botswana" data-capital="Gaborone">
+<img src="https://flagcdn.com/w320/bw.png" alt="Botswana flag">
+<h2>Botswana</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 2351625</p>
+<p><strong>Capital:</strong> Gaborone</p>
+</div>
+<div class="country" data-name="Tonga" data-capital="Nuku'alofa">
+<img src="https://flagcdn.com/w320/to.png" alt="Tonga flag">
+<h2>Tonga</h2>
+<p><strong>Region:</strong> Oceania</p>
+<p><strong>Population:</strong> 105697</p>
+<p><strong>Capital:</strong> Nuku'alofa</p>
+</div>
+<div class="country" data-name="Greece" data-capital="Athens">
+<img src="https://flagcdn.com/w320/gr.png" alt="Greece flag">
+<h2>Greece</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 10715549</p>
+<p><strong>Capital:</strong> Athens</p>
+</div>
+<div class="country" data-name="Marshall Islands" data-capital="Majuro">
+<img src="https://flagcdn.com/w320/mh.png" alt="Marshall Islands flag">
+<h2>Marshall Islands</h2>
+<p><strong>Region:</strong> Oceania</p>
+<p><strong>Population:</strong> 59194</p>
+<p><strong>Capital:</strong> Majuro</p>
+</div>
+<div class="country" data-name="Belarus" data-capital="Minsk">
+<img src="https://flagcdn.com/w320/by.png" alt="Belarus flag">
+<h2>Belarus</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 9398861</p>
+<p><strong>Capital:</strong> Minsk</p>
+</div>
+<div class="country" data-name="Republic of the Congo" data-capital="Brazzaville">
+<img src="https://flagcdn.com/w320/cg.png" alt="Republic of the Congo flag">
+<h2>Republic of the Congo</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 5657000</p>
+<p><strong>Capital:</strong> Brazzaville</p>
+</div>
+<div class="country" data-name="Tanzania" data-capital="Dodoma">
+<img src="https://flagcdn.com/w320/tz.png" alt="Tanzania flag">
+<h2>Tanzania</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 59734213</p>
+<p><strong>Capital:</strong> Dodoma</p>
+</div>
+<div class="country" data-name="Liechtenstein" data-capital="Vaduz">
+<img src="https://flagcdn.com/w320/li.png" alt="Liechtenstein flag">
+<h2>Liechtenstein</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 38137</p>
+<p><strong>Capital:</strong> Vaduz</p>
+</div>
+<div class="country" data-name="Sint Maarten" data-capital="Philipsburg">
+<img src="https://flagcdn.com/w320/sx.png" alt="Sint Maarten flag">
+<h2>Sint Maarten</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 40812</p>
+<p><strong>Capital:</strong> Philipsburg</p>
+</div>
+<div class="country" data-name="Bosnia and Herzegovina" data-capital="Sarajevo">
+<img src="https://flagcdn.com/w320/ba.png" alt="Bosnia and Herzegovina flag">
+<h2>Bosnia and Herzegovina</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 3280815</p>
+<p><strong>Capital:</strong> Sarajevo</p>
+</div>
+<div class="country" data-name="Bahrain" data-capital="Manama">
+<img src="https://flagcdn.com/w320/bh.png" alt="Bahrain flag">
+<h2>Bahrain</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 1701583</p>
+<p><strong>Capital:</strong> Manama</p>
+</div>
+<div class="country" data-name="Kenya" data-capital="Nairobi">
+<img src="https://flagcdn.com/w320/ke.png" alt="Kenya flag">
+<h2>Kenya</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 53771300</p>
+<p><strong>Capital:</strong> Nairobi</p>
+</div>
+<div class="country" data-name="Estonia" data-capital="Tallinn">
+<img src="https://flagcdn.com/w320/ee.png" alt="Estonia flag">
+<h2>Estonia</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 1331057</p>
+<p><strong>Capital:</strong> Tallinn</p>
+</div>
+<div class="country" data-name="Qatar" data-capital="Doha">
+<img src="https://flagcdn.com/w320/qa.png" alt="Qatar flag">
+<h2>Qatar</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 2881060</p>
+<p><strong>Capital:</strong> Doha</p>
+</div>
+<div class="country" data-name="Poland" data-capital="Warsaw">
+<img src="https://flagcdn.com/w320/pl.png" alt="Poland flag">
+<h2>Poland</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 37950802</p>
+<p><strong>Capital:</strong> Warsaw</p>
+</div>
+<div class="country" data-name="Moldova" data-capital="Chișinău">
+<img src="https://flagcdn.com/w320/md.png" alt="Moldova flag">
+<h2>Moldova</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 2617820</p>
+<p><strong>Capital:</strong> Chișinău</p>
+</div>
+<div class="country" data-name="Jordan" data-capital="Amman">
+<img src="https://flagcdn.com/w320/jo.png" alt="Jordan flag">
+<h2>Jordan</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 10203140</p>
+<p><strong>Capital:</strong> Amman</p>
+</div>
+<div class="country" data-name="Tunisia" data-capital="Tunis">
+<img src="https://flagcdn.com/w320/tn.png" alt="Tunisia flag">
+<h2>Tunisia</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 11818618</p>
+<p><strong>Capital:</strong> Tunis</p>
+</div>
+<div class="country" data-name="Paraguay" data-capital="Asunción">
+<img src="https://flagcdn.com/w320/py.png" alt="Paraguay flag">
+<h2>Paraguay</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 7132530</p>
+<p><strong>Capital:</strong> Asunción</p>
+</div>
+<div class="country" data-name="Malaysia" data-capital="Kuala Lumpur">
+<img src="https://flagcdn.com/w320/my.png" alt="Malaysia flag">
+<h2>Malaysia</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 32365998</p>
+<p><strong>Capital:</strong> Kuala Lumpur</p>
+</div>
+<div class="country" data-name="Cameroon" data-capital="Yaoundé">
+<img src="https://flagcdn.com/w320/cm.png" alt="Cameroon flag">
+<h2>Cameroon</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 26545864</p>
+<p><strong>Capital:</strong> Yaoundé</p>
+</div>
+<div class="country" data-name="Solomon Islands" data-capital="Honiara">
+<img src="https://flagcdn.com/w320/sb.png" alt="Solomon Islands flag">
+<h2>Solomon Islands</h2>
+<p><strong>Region:</strong> Oceania</p>
+<p><strong>Population:</strong> 686878</p>
+<p><strong>Capital:</strong> Honiara</p>
+</div>
+<div class="country" data-name="Mongolia" data-capital="Ulan Bator">
+<img src="https://flagcdn.com/w320/mn.png" alt="Mongolia flag">
+<h2>Mongolia</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 3278292</p>
+<p><strong>Capital:</strong> Ulan Bator</p>
+</div>
+<div class="country" data-name="Vanuatu" data-capital="Port Vila">
+<img src="https://flagcdn.com/w320/vu.png" alt="Vanuatu flag">
+<h2>Vanuatu</h2>
+<p><strong>Region:</strong> Oceania</p>
+<p><strong>Population:</strong> 307150</p>
+<p><strong>Capital:</strong> Port Vila</p>
+</div>
+<div class="country" data-name="Nepal" data-capital="Kathmandu">
+<img src="https://flagcdn.com/w320/np.png" alt="Nepal flag">
+<h2>Nepal</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 29136808</p>
+<p><strong>Capital:</strong> Kathmandu</p>
+</div>
+<div class="country" data-name="Guam" data-capital="Hagåtña">
+<img src="https://flagcdn.com/w320/gu.png" alt="Guam flag">
+<h2>Guam</h2>
+<p><strong>Region:</strong> Oceania</p>
+<p><strong>Population:</strong> 168783</p>
+<p><strong>Capital:</strong> Hagåtña</p>
+</div>
+<div class="country" data-name="Lebanon" data-capital="Beirut">
+<img src="https://flagcdn.com/w320/lb.png" alt="Lebanon flag">
+<h2>Lebanon</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 6825442</p>
+<p><strong>Capital:</strong> Beirut</p>
+</div>
+<div class="country" data-name="Ivory Coast" data-capital="Yamoussoukro">
+<img src="https://flagcdn.com/w320/ci.png" alt="Ivory Coast flag">
+<h2>Ivory Coast</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 26378275</p>
+<p><strong>Capital:</strong> Yamoussoukro</p>
+</div>
+<div class="country" data-name="Ecuador" data-capital="Quito">
+<img src="https://flagcdn.com/w320/ec.png" alt="Ecuador flag">
+<h2>Ecuador</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 17643060</p>
+<p><strong>Capital:</strong> Quito</p>
+</div>
+<div class="country" data-name="Palau" data-capital="Ngerulmud">
+<img src="https://flagcdn.com/w320/pw.png" alt="Palau flag">
+<h2>Palau</h2>
+<p><strong>Region:</strong> Oceania</p>
+<p><strong>Population:</strong> 18092</p>
+<p><strong>Capital:</strong> Ngerulmud</p>
+</div>
+<div class="country" data-name="Kyrgyzstan" data-capital="Bishkek">
+<img src="https://flagcdn.com/w320/kg.png" alt="Kyrgyzstan flag">
+<h2>Kyrgyzstan</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 6591600</p>
+<p><strong>Capital:</strong> Bishkek</p>
+</div>
+<div class="country" data-name="Egypt" data-capital="Cairo">
+<img src="https://flagcdn.com/w320/eg.png" alt="Egypt flag">
+<h2>Egypt</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 102334403</p>
+<p><strong>Capital:</strong> Cairo</p>
+</div>
+<div class="country" data-name="North Korea" data-capital="Pyongyang">
+<img src="https://flagcdn.com/w320/kp.png" alt="North Korea flag">
+<h2>North Korea</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 25778815</p>
+<p><strong>Capital:</strong> Pyongyang</p>
+</div>
+<div class="country" data-name="Senegal" data-capital="Dakar">
+<img src="https://flagcdn.com/w320/sn.png" alt="Senegal flag">
+<h2>Senegal</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 16743930</p>
+<p><strong>Capital:</strong> Dakar</p>
+</div>
+<div class="country" data-name="British Virgin Islands" data-capital="Road Town">
+<img src="https://flagcdn.com/w320/vg.png" alt="British Virgin Islands flag">
+<h2>British Virgin Islands</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 30237</p>
+<p><strong>Capital:</strong> Road Town</p>
+</div>
+<div class="country" data-name="Costa Rica" data-capital="San José">
+<img src="https://flagcdn.com/w320/cr.png" alt="Costa Rica flag">
+<h2>Costa Rica</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 5094114</p>
+<p><strong>Capital:</strong> San José</p>
+</div>
+<div class="country" data-name="Guatemala" data-capital="Guatemala City">
+<img src="https://flagcdn.com/w320/gt.png" alt="Guatemala flag">
+<h2>Guatemala</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 16858333</p>
+<p><strong>Capital:</strong> Guatemala City</p>
+</div>
+<div class="country" data-name="China" data-capital="Beijing">
+<img src="https://flagcdn.com/w320/cn.png" alt="China flag">
+<h2>China</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 1402112000</p>
+<p><strong>Capital:</strong> Beijing</p>
+</div>
+<div class="country" data-name="Kazakhstan" data-capital="Astana">
+<img src="https://flagcdn.com/w320/kz.png" alt="Kazakhstan flag">
+<h2>Kazakhstan</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 18754440</p>
+<p><strong>Capital:</strong> Astana</p>
+</div>
+<div class="country" data-name="Cape Verde" data-capital="Praia">
+<img src="https://flagcdn.com/w320/cv.png" alt="Cape Verde flag">
+<h2>Cape Verde</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 555988</p>
+<p><strong>Capital:</strong> Praia</p>
+</div>
+<div class="country" data-name="Vatican City" data-capital="Vatican City">
+<img src="https://flagcdn.com/w320/va.png" alt="Vatican City flag">
+<h2>Vatican City</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 451</p>
+<p><strong>Capital:</strong> Vatican City</p>
+</div>
+<div class="country" data-name="Bhutan" data-capital="Thimphu">
+<img src="https://flagcdn.com/w320/bt.png" alt="Bhutan flag">
+<h2>Bhutan</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 771612</p>
+<p><strong>Capital:</strong> Thimphu</p>
+</div>
+<div class="country" data-name="Colombia" data-capital="Bogotá">
+<img src="https://flagcdn.com/w320/co.png" alt="Colombia flag">
+<h2>Colombia</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 50882884</p>
+<p><strong>Capital:</strong> Bogotá</p>
+</div>
+<div class="country" data-name="Grenada" data-capital="St. George's">
+<img src="https://flagcdn.com/w320/gd.png" alt="Grenada flag">
+<h2>Grenada</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 112519</p>
+<p><strong>Capital:</strong> St. George's</p>
+</div>
+<div class="country" data-name="Northern Mariana Islands" data-capital="Saipan">
+<img src="https://flagcdn.com/w320/mp.png" alt="Northern Mariana Islands flag">
+<h2>Northern Mariana Islands</h2>
+<p><strong>Region:</strong> Oceania</p>
+<p><strong>Population:</strong> 57557</p>
+<p><strong>Capital:</strong> Saipan</p>
+</div>
+<div class="country" data-name="Papua New Guinea" data-capital="Port Moresby">
+<img src="https://flagcdn.com/w320/pg.png" alt="Papua New Guinea flag">
+<h2>Papua New Guinea</h2>
+<p><strong>Region:</strong> Oceania</p>
+<p><strong>Population:</strong> 8947027</p>
+<p><strong>Capital:</strong> Port Moresby</p>
+</div>
+<div class="country" data-name="Antarctica" data-capital="N/A">
+<img src="https://flagcdn.com/w320/aq.png" alt="Antarctica flag">
+<h2>Antarctica</h2>
+<p><strong>Region:</strong> Antarctic</p>
+<p><strong>Population:</strong> 1000</p>
+<p><strong>Capital:</strong> N/A</p>
+</div>
+<div class="country" data-name="South Africa" data-capital="Pretoria">
+<img src="https://flagcdn.com/w320/za.png" alt="South Africa flag">
+<h2>South Africa</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 59308690</p>
+<p><strong>Capital:</strong> Pretoria</p>
+</div>
+<div class="country" data-name="Guinea" data-capital="Conakry">
+<img src="https://flagcdn.com/w320/gn.png" alt="Guinea flag">
+<h2>Guinea</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 13132792</p>
+<p><strong>Capital:</strong> Conakry</p>
+</div>
+<div class="country" data-name="Hong Kong" data-capital="City of Victoria">
+<img src="https://flagcdn.com/w320/hk.png" alt="Hong Kong flag">
+<h2>Hong Kong</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 7500700</p>
+<p><strong>Capital:</strong> City of Victoria</p>
+</div>
+<div class="country" data-name="Chad" data-capital="N'Djamena">
+<img src="https://flagcdn.com/w320/td.png" alt="Chad flag">
+<h2>Chad</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 16425859</p>
+<p><strong>Capital:</strong> N'Djamena</p>
+</div>
+<div class="country" data-name="Saint Helena, Ascension and Tristan da Cunha" data-capital="Jamestown">
+<img src="https://flagcdn.com/w320/sh.png" alt="Saint Helena, Ascension and Tristan da Cunha flag">
+<h2>Saint Helena, Ascension and Tristan da Cunha</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 53192</p>
+<p><strong>Capital:</strong> Jamestown</p>
+</div>
+<div class="country" data-name="Honduras" data-capital="Tegucigalpa">
+<img src="https://flagcdn.com/w320/hn.png" alt="Honduras flag">
+<h2>Honduras</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 9904608</p>
+<p><strong>Capital:</strong> Tegucigalpa</p>
+</div>
+<div class="country" data-name="Montenegro" data-capital="Podgorica">
+<img src="https://flagcdn.com/w320/me.png" alt="Montenegro flag">
+<h2>Montenegro</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 621718</p>
+<p><strong>Capital:</strong> Podgorica</p>
+</div>
+<div class="country" data-name="Morocco" data-capital="Rabat">
+<img src="https://flagcdn.com/w320/ma.png" alt="Morocco flag">
+<h2>Morocco</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 36910558</p>
+<p><strong>Capital:</strong> Rabat</p>
+</div>
+<div class="country" data-name="Nicaragua" data-capital="Managua">
+<img src="https://flagcdn.com/w320/ni.png" alt="Nicaragua flag">
+<h2>Nicaragua</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 6624554</p>
+<p><strong>Capital:</strong> Managua</p>
+</div>
+<div class="country" data-name="Cayman Islands" data-capital="George Town">
+<img src="https://flagcdn.com/w320/ky.png" alt="Cayman Islands flag">
+<h2>Cayman Islands</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 65720</p>
+<p><strong>Capital:</strong> George Town</p>
+</div>
+<div class="country" data-name="Luxembourg" data-capital="Luxembourg">
+<img src="https://flagcdn.com/w320/lu.png" alt="Luxembourg flag">
+<h2>Luxembourg</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 632275</p>
+<p><strong>Capital:</strong> Luxembourg</p>
+</div>
+<div class="country" data-name="Guyana" data-capital="Georgetown">
+<img src="https://flagcdn.com/w320/gy.png" alt="Guyana flag">
+<h2>Guyana</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 786559</p>
+<p><strong>Capital:</strong> Georgetown</p>
+</div>
+<div class="country" data-name="Bulgaria" data-capital="Sofia">
+<img src="https://flagcdn.com/w320/bg.png" alt="Bulgaria flag">
+<h2>Bulgaria</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 6927288</p>
+<p><strong>Capital:</strong> Sofia</p>
+</div>
+<div class="country" data-name="Ghana" data-capital="Accra">
+<img src="https://flagcdn.com/w320/gh.png" alt="Ghana flag">
+<h2>Ghana</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 31072945</p>
+<p><strong>Capital:</strong> Accra</p>
+</div>
+<div class="country" data-name="Finland" data-capital="Helsinki">
+<img src="https://flagcdn.com/w320/fi.png" alt="Finland flag">
+<h2>Finland</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 5530719</p>
+<p><strong>Capital:</strong> Helsinki</p>
+</div>
+<div class="country" data-name="Seychelles" data-capital="Victoria">
+<img src="https://flagcdn.com/w320/sc.png" alt="Seychelles flag">
+<h2>Seychelles</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 98462</p>
+<p><strong>Capital:</strong> Victoria</p>
+</div>
+<div class="country" data-name="United States Virgin Islands" data-capital="Charlotte Amalie">
+<img src="https://flagcdn.com/w320/vi.png" alt="United States Virgin Islands flag">
+<h2>United States Virgin Islands</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 106290</p>
+<p><strong>Capital:</strong> Charlotte Amalie</p>
+</div>
+<div class="country" data-name="Ethiopia" data-capital="Addis Ababa">
+<img src="https://flagcdn.com/w320/et.png" alt="Ethiopia flag">
+<h2>Ethiopia</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 114963583</p>
+<p><strong>Capital:</strong> Addis Ababa</p>
+</div>
+<div class="country" data-name="Mauritania" data-capital="Nouakchott">
+<img src="https://flagcdn.com/w320/mr.png" alt="Mauritania flag">
+<h2>Mauritania</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 4649660</p>
+<p><strong>Capital:</strong> Nouakchott</p>
+</div>
+<div class="country" data-name="Iceland" data-capital="Reykjavik">
+<img src="https://flagcdn.com/w320/is.png" alt="Iceland flag">
+<h2>Iceland</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 366425</p>
+<p><strong>Capital:</strong> Reykjavik</p>
+</div>
+<div class="country" data-name="Réunion" data-capital="Saint-Denis">
+<img src="https://flagcdn.com/w320/re.png" alt="Réunion flag">
+<h2>Réunion</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 840974</p>
+<p><strong>Capital:</strong> Saint-Denis</p>
+</div>
+<div class="country" data-name="Tajikistan" data-capital="Dushanbe">
+<img src="https://flagcdn.com/w320/tj.png" alt="Tajikistan flag">
+<h2>Tajikistan</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 9537642</p>
+<p><strong>Capital:</strong> Dushanbe</p>
+</div>
+<div class="country" data-name="Cuba" data-capital="Havana">
+<img src="https://flagcdn.com/w320/cu.png" alt="Cuba flag">
+<h2>Cuba</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 11326616</p>
+<p><strong>Capital:</strong> Havana</p>
+</div>
+<div class="country" data-name="Somalia" data-capital="Mogadishu">
+<img src="https://flagcdn.com/w320/so.png" alt="Somalia flag">
+<h2>Somalia</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 15893219</p>
+<p><strong>Capital:</strong> Mogadishu</p>
+</div>
+<div class="country" data-name="Switzerland" data-capital="Bern">
+<img src="https://flagcdn.com/w320/ch.png" alt="Switzerland flag">
+<h2>Switzerland</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 8654622</p>
+<p><strong>Capital:</strong> Bern</p>
+</div>
+<div class="country" data-name="Christmas Island" data-capital="Flying Fish Cove">
+<img src="https://flagcdn.com/w320/cx.png" alt="Christmas Island flag">
+<h2>Christmas Island</h2>
+<p><strong>Region:</strong> Oceania</p>
+<p><strong>Population:</strong> 2072</p>
+<p><strong>Capital:</strong> Flying Fish Cove</p>
+</div>
+<div class="country" data-name="Martinique" data-capital="Fort-de-France">
+<img src="https://flagcdn.com/w320/mq.png" alt="Martinique flag">
+<h2>Martinique</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 378243</p>
+<p><strong>Capital:</strong> Fort-de-France</p>
+</div>
+<div class="country" data-name="Australia" data-capital="Canberra">
+<img src="https://flagcdn.com/w320/au.png" alt="Australia flag">
+<h2>Australia</h2>
+<p><strong>Region:</strong> Oceania</p>
+<p><strong>Population:</strong> 25687041</p>
+<p><strong>Capital:</strong> Canberra</p>
+</div>
+<div class="country" data-name="Benin" data-capital="Porto-Novo">
+<img src="https://flagcdn.com/w320/bj.png" alt="Benin flag">
+<h2>Benin</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 12123198</p>
+<p><strong>Capital:</strong> Porto-Novo</p>
+</div>
+<div class="country" data-name="Laos" data-capital="Vientiane">
+<img src="https://flagcdn.com/w320/la.png" alt="Laos flag">
+<h2>Laos</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 7275556</p>
+<p><strong>Capital:</strong> Vientiane</p>
+</div>
+<div class="country" data-name="Sudan" data-capital="Khartoum">
+<img src="https://flagcdn.com/w320/sd.png" alt="Sudan flag">
+<h2>Sudan</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 43849269</p>
+<p><strong>Capital:</strong> Khartoum</p>
+</div>
+<div class="country" data-name="Libya" data-capital="Tripoli">
+<img src="https://flagcdn.com/w320/ly.png" alt="Libya flag">
+<h2>Libya</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 6871287</p>
+<p><strong>Capital:</strong> Tripoli</p>
+</div>
+<div class="country" data-name="Mali" data-capital="Bamako">
+<img src="https://flagcdn.com/w320/ml.png" alt="Mali flag">
+<h2>Mali</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 20250834</p>
+<p><strong>Capital:</strong> Bamako</p>
+</div>
+<div class="country" data-name="Peru" data-capital="Lima">
+<img src="https://flagcdn.com/w320/pe.png" alt="Peru flag">
+<h2>Peru</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 32971846</p>
+<p><strong>Capital:</strong> Lima</p>
+</div>
+<div class="country" data-name="Hungary" data-capital="Budapest">
+<img src="https://flagcdn.com/w320/hu.png" alt="Hungary flag">
+<h2>Hungary</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 9749763</p>
+<p><strong>Capital:</strong> Budapest</p>
+</div>
+<div class="country" data-name="Bermuda" data-capital="Hamilton">
+<img src="https://flagcdn.com/w320/bm.png" alt="Bermuda flag">
+<h2>Bermuda</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 63903</p>
+<p><strong>Capital:</strong> Hamilton</p>
+</div>
+<div class="country" data-name="Fiji" data-capital="Suva">
+<img src="https://flagcdn.com/w320/fj.png" alt="Fiji flag">
+<h2>Fiji</h2>
+<p><strong>Region:</strong> Oceania</p>
+<p><strong>Population:</strong> 896444</p>
+<p><strong>Capital:</strong> Suva</p>
+</div>
+<div class="country" data-name="Netherlands" data-capital="Amsterdam">
+<img src="https://flagcdn.com/w320/nl.png" alt="Netherlands flag">
+<h2>Netherlands</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 16655799</p>
+<p><strong>Capital:</strong> Amsterdam</p>
+</div>
+<div class="country" data-name="Nigeria" data-capital="Abuja">
+<img src="https://flagcdn.com/w320/ng.png" alt="Nigeria flag">
+<h2>Nigeria</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 206139587</p>
+<p><strong>Capital:</strong> Abuja</p>
+</div>
+<div class="country" data-name="Portugal" data-capital="Lisbon">
+<img src="https://flagcdn.com/w320/pt.png" alt="Portugal flag">
+<h2>Portugal</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 10305564</p>
+<p><strong>Capital:</strong> Lisbon</p>
+</div>
+<div class="country" data-name="India" data-capital="New Delhi">
+<img src="https://flagcdn.com/w320/in.png" alt="India flag">
+<h2>India</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 1380004385</p>
+<p><strong>Capital:</strong> New Delhi</p>
+</div>
+<div class="country" data-name="South Georgia" data-capital="King Edward Point">
+<img src="https://flagcdn.com/w320/gs.png" alt="South Georgia flag">
+<h2>South Georgia</h2>
+<p><strong>Region:</strong> Antarctic</p>
+<p><strong>Population:</strong> 30</p>
+<p><strong>Capital:</strong> King Edward Point</p>
+</div>
+<div class="country" data-name="Lesotho" data-capital="Maseru">
+<img src="https://flagcdn.com/w320/ls.png" alt="Lesotho flag">
+<h2>Lesotho</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 2142252</p>
+<p><strong>Capital:</strong> Maseru</p>
+</div>
+<div class="country" data-name="Zambia" data-capital="Lusaka">
+<img src="https://flagcdn.com/w320/zm.png" alt="Zambia flag">
+<h2>Zambia</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 18383956</p>
+<p><strong>Capital:</strong> Lusaka</p>
+</div>
+<div class="country" data-name="Tokelau" data-capital="Fakaofo">
+<img src="https://flagcdn.com/w320/tk.png" alt="Tokelau flag">
+<h2>Tokelau</h2>
+<p><strong>Region:</strong> Oceania</p>
+<p><strong>Population:</strong> 1411</p>
+<p><strong>Capital:</strong> Fakaofo</p>
+</div>
+<div class="country" data-name="Gambia" data-capital="Banjul">
+<img src="https://flagcdn.com/w320/gm.png" alt="Gambia flag">
+<h2>Gambia</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 2416664</p>
+<p><strong>Capital:</strong> Banjul</p>
+</div>
+<div class="country" data-name="Sierra Leone" data-capital="Freetown">
+<img src="https://flagcdn.com/w320/sl.png" alt="Sierra Leone flag">
+<h2>Sierra Leone</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 7976985</p>
+<p><strong>Capital:</strong> Freetown</p>
+</div>
+<div class="country" data-name="Kiribati" data-capital="South Tarawa">
+<img src="https://flagcdn.com/w320/ki.png" alt="Kiribati flag">
+<h2>Kiribati</h2>
+<p><strong>Region:</strong> Oceania</p>
+<p><strong>Population:</strong> 119446</p>
+<p><strong>Capital:</strong> South Tarawa</p>
+</div>
+<div class="country" data-name="Norway" data-capital="Oslo">
+<img src="https://flagcdn.com/w320/no.png" alt="Norway flag">
+<h2>Norway</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 5379475</p>
+<p><strong>Capital:</strong> Oslo</p>
+</div>
+<div class="country" data-name="Ireland" data-capital="Dublin">
+<img src="https://flagcdn.com/w320/ie.png" alt="Ireland flag">
+<h2>Ireland</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 4994724</p>
+<p><strong>Capital:</strong> Dublin</p>
+</div>
+<div class="country" data-name="Greenland" data-capital="Nuuk">
+<img src="https://flagcdn.com/w320/gl.png" alt="Greenland flag">
+<h2>Greenland</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 56367</p>
+<p><strong>Capital:</strong> Nuuk</p>
+</div>
+<div class="country" data-name="British Indian Ocean Territory" data-capital="Diego Garcia">
+<img src="https://flagcdn.com/w320/io.png" alt="British Indian Ocean Territory flag">
+<h2>British Indian Ocean Territory</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 3000</p>
+<p><strong>Capital:</strong> Diego Garcia</p>
+</div>
+<div class="country" data-name="Mozambique" data-capital="Maputo">
+<img src="https://flagcdn.com/w320/mz.png" alt="Mozambique flag">
+<h2>Mozambique</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 31255435</p>
+<p><strong>Capital:</strong> Maputo</p>
+</div>
+<div class="country" data-name="Panama" data-capital="Panama City">
+<img src="https://flagcdn.com/w320/pa.png" alt="Panama flag">
+<h2>Panama</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 4314768</p>
+<p><strong>Capital:</strong> Panama City</p>
+</div>
+<div class="country" data-name="Ukraine" data-capital="Kyiv">
+<img src="https://flagcdn.com/w320/ua.png" alt="Ukraine flag">
+<h2>Ukraine</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 44134693</p>
+<p><strong>Capital:</strong> Kyiv</p>
+</div>
+<div class="country" data-name="Uruguay" data-capital="Montevideo">
+<img src="https://flagcdn.com/w320/uy.png" alt="Uruguay flag">
+<h2>Uruguay</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 3473727</p>
+<p><strong>Capital:</strong> Montevideo</p>
+</div>
+<div class="country" data-name="Aruba" data-capital="Oranjestad">
+<img src="https://flagcdn.com/w320/aw.png" alt="Aruba flag">
+<h2>Aruba</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 106766</p>
+<p><strong>Capital:</strong> Oranjestad</p>
+</div>
+<div class="country" data-name="Iran" data-capital="Tehran">
+<img src="https://flagcdn.com/w320/ir.png" alt="Iran flag">
+<h2>Iran</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 83992953</p>
+<p><strong>Capital:</strong> Tehran</p>
+</div>
+<div class="country" data-name="Isle of Man" data-capital="Douglas">
+<img src="https://flagcdn.com/w320/im.png" alt="Isle of Man flag">
+<h2>Isle of Man</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 85032</p>
+<p><strong>Capital:</strong> Douglas</p>
+</div>
+<div class="country" data-name="Åland Islands" data-capital="Mariehamn">
+<img src="https://flagcdn.com/w320/ax.png" alt="Åland Islands flag">
+<h2>Åland Islands</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 29458</p>
+<p><strong>Capital:</strong> Mariehamn</p>
+</div>
+<div class="country" data-name="Saudi Arabia" data-capital="Riyadh">
+<img src="https://flagcdn.com/w320/sa.png" alt="Saudi Arabia flag">
+<h2>Saudi Arabia</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 34813867</p>
+<p><strong>Capital:</strong> Riyadh</p>
+</div>
+<div class="country" data-name="Djibouti" data-capital="Djibouti">
+<img src="https://flagcdn.com/w320/dj.png" alt="Djibouti flag">
+<h2>Djibouti</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 988002</p>
+<p><strong>Capital:</strong> Djibouti</p>
+</div>
+<div class="country" data-name="Italy" data-capital="Rome">
+<img src="https://flagcdn.com/w320/it.png" alt="Italy flag">
+<h2>Italy</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 59554023</p>
+<p><strong>Capital:</strong> Rome</p>
+</div>
+<div class="country" data-name="Canada" data-capital="Ottawa">
+<img src="https://flagcdn.com/w320/ca.png" alt="Canada flag">
+<h2>Canada</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 38005238</p>
+<p><strong>Capital:</strong> Ottawa</p>
+</div>
+<div class="country" data-name="Jamaica" data-capital="Kingston">
+<img src="https://flagcdn.com/w320/jm.png" alt="Jamaica flag">
+<h2>Jamaica</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 2961161</p>
+<p><strong>Capital:</strong> Kingston</p>
+</div>
+<div class="country" data-name="Niger" data-capital="Niamey">
+<img src="https://flagcdn.com/w320/ne.png" alt="Niger flag">
+<h2>Niger</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 24206636</p>
+<p><strong>Capital:</strong> Niamey</p>
+</div>
+<div class="country" data-name="Afghanistan" data-capital="Kabul">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_the_Taliban.svg/320px-Flag_of_the_Taliban.svg.png" alt="Afghanistan flag">
+<h2>Afghanistan</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 40218234</p>
+<p><strong>Capital:</strong> Kabul</p>
+</div>
+<div class="country" data-name="Croatia" data-capital="Zagreb">
+<img src="https://flagcdn.com/w320/hr.png" alt="Croatia flag">
+<h2>Croatia</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 4047200</p>
+<p><strong>Capital:</strong> Zagreb</p>
+</div>
+<div class="country" data-name="Latvia" data-capital="Riga">
+<img src="https://flagcdn.com/w320/lv.png" alt="Latvia flag">
+<h2>Latvia</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 1901548</p>
+<p><strong>Capital:</strong> Riga</p>
+</div>
+<div class="country" data-name="Samoa" data-capital="Apia">
+<img src="https://flagcdn.com/w320/ws.png" alt="Samoa flag">
+<h2>Samoa</h2>
+<p><strong>Region:</strong> Oceania</p>
+<p><strong>Population:</strong> 198410</p>
+<p><strong>Capital:</strong> Apia</p>
+</div>
+<div class="country" data-name="Curaçao" data-capital="Willemstad">
+<img src="https://flagcdn.com/w320/cw.png" alt="Curaçao flag">
+<h2>Curaçao</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 155014</p>
+<p><strong>Capital:</strong> Willemstad</p>
+</div>
+<div class="country" data-name="Cyprus" data-capital="Nicosia">
+<img src="https://flagcdn.com/w320/cy.png" alt="Cyprus flag">
+<h2>Cyprus</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 1207361</p>
+<p><strong>Capital:</strong> Nicosia</p>
+</div>
+<div class="country" data-name="Madagascar" data-capital="Antananarivo">
+<img src="https://flagcdn.com/w320/mg.png" alt="Madagascar flag">
+<h2>Madagascar</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 27691019</p>
+<p><strong>Capital:</strong> Antananarivo</p>
+</div>
+<div class="country" data-name="Uzbekistan" data-capital="Tashkent">
+<img src="https://flagcdn.com/w320/uz.png" alt="Uzbekistan flag">
+<h2>Uzbekistan</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 34232050</p>
+<p><strong>Capital:</strong> Tashkent</p>
+</div>
+<div class="country" data-name="Macau" data-capital="N/A">
+<img src="https://flagcdn.com/w320/mo.png" alt="Macau flag">
+<h2>Macau</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 649342</p>
+<p><strong>Capital:</strong> N/A</p>
+</div>
+<div class="country" data-name="Micronesia" data-capital="Palikir">
+<img src="https://flagcdn.com/w320/fm.png" alt="Micronesia flag">
+<h2>Micronesia</h2>
+<p><strong>Region:</strong> Oceania</p>
+<p><strong>Population:</strong> 115021</p>
+<p><strong>Capital:</strong> Palikir</p>
+</div>
+<div class="country" data-name="Maldives" data-capital="Malé">
+<img src="https://flagcdn.com/w320/mv.png" alt="Maldives flag">
+<h2>Maldives</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 540542</p>
+<p><strong>Capital:</strong> Malé</p>
+</div>
+<div class="country" data-name="Slovenia" data-capital="Ljubljana">
+<img src="https://flagcdn.com/w320/si.png" alt="Slovenia flag">
+<h2>Slovenia</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 2100126</p>
+<p><strong>Capital:</strong> Ljubljana</p>
+</div>
+<div class="country" data-name="Andorra" data-capital="Andorra la Vella">
+<img src="https://flagcdn.com/w320/ad.png" alt="Andorra flag">
+<h2>Andorra</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 77265</p>
+<p><strong>Capital:</strong> Andorra la Vella</p>
+</div>
+<div class="country" data-name="Eritrea" data-capital="Asmara">
+<img src="https://flagcdn.com/w320/er.png" alt="Eritrea flag">
+<h2>Eritrea</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 5352000</p>
+<p><strong>Capital:</strong> Asmara</p>
+</div>
+<div class="country" data-name="Guinea-Bissau" data-capital="Bissau">
+<img src="https://flagcdn.com/w320/gw.png" alt="Guinea-Bissau flag">
+<h2>Guinea-Bissau</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 1967998</p>
+<p><strong>Capital:</strong> Bissau</p>
+</div>
+<div class="country" data-name="Kuwait" data-capital="Kuwait City">
+<img src="https://flagcdn.com/w320/kw.png" alt="Kuwait flag">
+<h2>Kuwait</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 4270563</p>
+<p><strong>Capital:</strong> Kuwait City</p>
+</div>
+<div class="country" data-name="Gabon" data-capital="Libreville">
+<img src="https://flagcdn.com/w320/ga.png" alt="Gabon flag">
+<h2>Gabon</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 2225728</p>
+<p><strong>Capital:</strong> Libreville</p>
+</div>
+<div class="country" data-name="Yemen" data-capital="Sana'a">
+<img src="https://flagcdn.com/w320/ye.png" alt="Yemen flag">
+<h2>Yemen</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 29825968</p>
+<p><strong>Capital:</strong> Sana'a</p>
+</div>
+<div class="country" data-name="Cocos (Keeling) Islands" data-capital="West Island">
+<img src="https://flagcdn.com/w320/cc.png" alt="Cocos (Keeling) Islands flag">
+<h2>Cocos (Keeling) Islands</h2>
+<p><strong>Region:</strong> Oceania</p>
+<p><strong>Population:</strong> 544</p>
+<p><strong>Capital:</strong> West Island</p>
+</div>
+<div class="country" data-name="Timor-Leste" data-capital="Dili">
+<img src="https://flagcdn.com/w320/tl.png" alt="Timor-Leste flag">
+<h2>Timor-Leste</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 1318442</p>
+<p><strong>Capital:</strong> Dili</p>
+</div>
+<div class="country" data-name="Slovakia" data-capital="Bratislava">
+<img src="https://flagcdn.com/w320/sk.png" alt="Slovakia flag">
+<h2>Slovakia</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 5458827</p>
+<p><strong>Capital:</strong> Bratislava</p>
+</div>
+<div class="country" data-name="Rwanda" data-capital="Kigali">
+<img src="https://flagcdn.com/w320/rw.png" alt="Rwanda flag">
+<h2>Rwanda</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 12952209</p>
+<p><strong>Capital:</strong> Kigali</p>
+</div>
+<div class="country" data-name="Antigua and Barbuda" data-capital="Saint John's">
+<img src="https://flagcdn.com/w320/ag.png" alt="Antigua and Barbuda flag">
+<h2>Antigua and Barbuda</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 97928</p>
+<p><strong>Capital:</strong> Saint John's</p>
+</div>
+<div class="country" data-name="Togo" data-capital="Lomé">
+<img src="https://flagcdn.com/w320/tg.png" alt="Togo flag">
+<h2>Togo</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 8278737</p>
+<p><strong>Capital:</strong> Lomé</p>
+</div>
+<div class="country" data-name="Syria" data-capital="Damascus">
+<img src="https://flagcdn.com/w320/sy.png" alt="Syria flag">
+<h2>Syria</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 17500657</p>
+<p><strong>Capital:</strong> Damascus</p>
+</div>
+<div class="country" data-name="Guadeloupe" data-capital="Basse-Terre">
+<img src="https://flagcdn.com/w320/gp.png" alt="Guadeloupe flag">
+<h2>Guadeloupe</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 400132</p>
+<p><strong>Capital:</strong> Basse-Terre</p>
+</div>
+<div class="country" data-name="Turkmenistan" data-capital="Ashgabat">
+<img src="https://flagcdn.com/w320/tm.png" alt="Turkmenistan flag">
+<h2>Turkmenistan</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 6031187</p>
+<p><strong>Capital:</strong> Ashgabat</p>
+</div>
+<div class="country" data-name="Sri Lanka" data-capital="Sri Jayawardenepura Kotte">
+<img src="https://flagcdn.com/w320/lk.png" alt="Sri Lanka flag">
+<h2>Sri Lanka</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 21919000</p>
+<p><strong>Capital:</strong> Sri Jayawardenepura Kotte</p>
+</div>
+<div class="country" data-name="United States" data-capital="Washington, D.C.">
+<img src="https://flagcdn.com/w320/us.png" alt="United States flag">
+<h2>United States</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 329484123</p>
+<p><strong>Capital:</strong> Washington, D.C.</p>
+</div>
+<div class="country" data-name="Argentina" data-capital="Buenos Aires">
+<img src="https://flagcdn.com/w320/ar.png" alt="Argentina flag">
+<h2>Argentina</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 45376763</p>
+<p><strong>Capital:</strong> Buenos Aires</p>
+</div>
+<div class="country" data-name="South Sudan" data-capital="Juba">
+<img src="https://flagcdn.com/w320/ss.png" alt="South Sudan flag">
+<h2>South Sudan</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 11193729</p>
+<p><strong>Capital:</strong> Juba</p>
+</div>
+<div class="country" data-name="Palestine" data-capital="Ramallah">
+<img src="https://flagcdn.com/w320/ps.png" alt="Palestine flag">
+<h2>Palestine</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 4803269</p>
+<p><strong>Capital:</strong> Ramallah</p>
+</div>
+<div class="country" data-name="Georgia" data-capital="Tbilisi">
+<img src="https://flagcdn.com/w320/ge.png" alt="Georgia flag">
+<h2>Georgia</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 3714000</p>
+<p><strong>Capital:</strong> Tbilisi</p>
+</div>
+<div class="country" data-name="Japan" data-capital="Tokyo">
+<img src="https://flagcdn.com/w320/jp.png" alt="Japan flag">
+<h2>Japan</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 125836021</p>
+<p><strong>Capital:</strong> Tokyo</p>
+</div>
+<div class="country" data-name="Sweden" data-capital="Stockholm">
+<img src="https://flagcdn.com/w320/se.png" alt="Sweden flag">
+<h2>Sweden</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 10353442</p>
+<p><strong>Capital:</strong> Stockholm</p>
+</div>
+<div class="country" data-name="Chile" data-capital="Santiago">
+<img src="https://flagcdn.com/w320/cl.png" alt="Chile flag">
+<h2>Chile</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 19116209</p>
+<p><strong>Capital:</strong> Santiago</p>
+</div>
+<div class="country" data-name="Saint Kitts and Nevis" data-capital="Basseterre">
+<img src="https://flagcdn.com/w320/kn.png" alt="Saint Kitts and Nevis flag">
+<h2>Saint Kitts and Nevis</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 53192</p>
+<p><strong>Capital:</strong> Basseterre</p>
+</div>
+<div class="country" data-name="Denmark" data-capital="Copenhagen">
+<img src="https://flagcdn.com/w320/dk.png" alt="Denmark flag">
+<h2>Denmark</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 5831404</p>
+<p><strong>Capital:</strong> Copenhagen</p>
+</div>
+<div class="country" data-name="United States Minor Outlying Islands" data-capital="Washington DC">
+<img src="https://flagcdn.com/w320/um.png" alt="United States Minor Outlying Islands flag">
+<h2>United States Minor Outlying Islands</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 300</p>
+<p><strong>Capital:</strong> Washington DC</p>
+</div>
+<div class="country" data-name="American Samoa" data-capital="Pago Pago">
+<img src="https://flagcdn.com/w320/as.png" alt="American Samoa flag">
+<h2>American Samoa</h2>
+<p><strong>Region:</strong> Oceania</p>
+<p><strong>Population:</strong> 55197</p>
+<p><strong>Capital:</strong> Pago Pago</p>
+</div>
+<div class="country" data-name="Anguilla" data-capital="The Valley">
+<img src="https://flagcdn.com/w320/ai.png" alt="Anguilla flag">
+<h2>Anguilla</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 13452</p>
+<p><strong>Capital:</strong> The Valley</p>
+</div>
+<div class="country" data-name="Philippines" data-capital="Manila">
+<img src="https://flagcdn.com/w320/ph.png" alt="Philippines flag">
+<h2>Philippines</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 109581085</p>
+<p><strong>Capital:</strong> Manila</p>
+</div>
+<div class="country" data-name="Bolivia" data-capital="Sucre">
+<img src="https://flagcdn.com/w320/bo.png" alt="Bolivia flag">
+<h2>Bolivia</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 11673029</p>
+<p><strong>Capital:</strong> Sucre</p>
+</div>
+<div class="country" data-name="São Tomé and Príncipe" data-capital="São Tomé">
+<img src="https://flagcdn.com/w320/st.png" alt="São Tomé and Príncipe flag">
+<h2>São Tomé and Príncipe</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 219161</p>
+<p><strong>Capital:</strong> São Tomé</p>
+</div>
+<div class="country" data-name="Montserrat" data-capital="Plymouth">
+<img src="https://flagcdn.com/w320/ms.png" alt="Montserrat flag">
+<h2>Montserrat</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 4922</p>
+<p><strong>Capital:</strong> Plymouth</p>
+</div>
+<div class="country" data-name="Myanmar" data-capital="Naypyidaw">
+<img src="https://flagcdn.com/w320/mm.png" alt="Myanmar flag">
+<h2>Myanmar</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 54409794</p>
+<p><strong>Capital:</strong> Naypyidaw</p>
+</div>
+<div class="country" data-name="Niue" data-capital="Alofi">
+<img src="https://flagcdn.com/w320/nu.png" alt="Niue flag">
+<h2>Niue</h2>
+<p><strong>Region:</strong> Oceania</p>
+<p><strong>Population:</strong> 1470</p>
+<p><strong>Capital:</strong> Alofi</p>
+</div>
+<div class="country" data-name="Israel" data-capital="Jerusalem">
+<img src="https://flagcdn.com/w320/il.png" alt="Israel flag">
+<h2>Israel</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 9216900</p>
+<p><strong>Capital:</strong> Jerusalem</p>
+</div>
+<div class="country" data-name="Heard Island and McDonald Islands" data-capital="N/A">
+<img src="https://flagcdn.com/w320/hm.png" alt="Heard Island and McDonald Islands flag">
+<h2>Heard Island and McDonald Islands</h2>
+<p><strong>Region:</strong> Antarctic</p>
+<p><strong>Population:</strong> 0</p>
+<p><strong>Capital:</strong> N/A</p>
+</div>
+<div class="country" data-name="Comoros" data-capital="Moroni">
+<img src="https://flagcdn.com/w320/km.png" alt="Comoros flag">
+<h2>Comoros</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 869595</p>
+<p><strong>Capital:</strong> Moroni</p>
+</div>
+<div class="country" data-name="Saint Vincent and the Grenadines" data-capital="Kingstown">
+<img src="https://flagcdn.com/w320/vc.png" alt="Saint Vincent and the Grenadines flag">
+<h2>Saint Vincent and the Grenadines</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 110947</p>
+<p><strong>Capital:</strong> Kingstown</p>
+</div>
+<div class="country" data-name="Vietnam" data-capital="Hanoi">
+<img src="https://flagcdn.com/w320/vn.png" alt="Vietnam flag">
+<h2>Vietnam</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 97338583</p>
+<p><strong>Capital:</strong> Hanoi</p>
+</div>
+<div class="country" data-name="Caribbean Netherlands" data-capital="Kralendijk">
+<img src="https://flagcdn.com/w320/bq.png" alt="Caribbean Netherlands flag">
+<h2>Caribbean Netherlands</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 25987</p>
+<p><strong>Capital:</strong> Kralendijk</p>
+</div>
+<div class="country" data-name="Jersey" data-capital="Saint Helier">
+<img src="https://flagcdn.com/w320/je.png" alt="Jersey flag">
+<h2>Jersey</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 100800</p>
+<p><strong>Capital:</strong> Saint Helier</p>
+</div>
+<div class="country" data-name="Falkland Islands" data-capital="Stanley">
+<img src="https://flagcdn.com/w320/fk.png" alt="Falkland Islands flag">
+<h2>Falkland Islands</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 2563</p>
+<p><strong>Capital:</strong> Stanley</p>
+</div>
+<div class="country" data-name="Armenia" data-capital="Yerevan">
+<img src="https://flagcdn.com/w320/am.png" alt="Armenia flag">
+<h2>Armenia</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 2963234</p>
+<p><strong>Capital:</strong> Yerevan</p>
+</div>
+<div class="country" data-name="Kosovo" data-capital="Pristina">
+<img src="https://flagcdn.com/w320/xk.png" alt="Kosovo flag">
+<h2>Kosovo</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 1775378</p>
+<p><strong>Capital:</strong> Pristina</p>
+</div>
+<div class="country" data-name="Bouvet Island" data-capital="N/A">
+<img src="https://flagcdn.com/w320/bv.png" alt="Bouvet Island flag">
+<h2>Bouvet Island</h2>
+<p><strong>Region:</strong> Antarctic</p>
+<p><strong>Population:</strong> 0</p>
+<p><strong>Capital:</strong> N/A</p>
+</div>
+<div class="country" data-name="Venezuela" data-capital="Caracas">
+<img src="https://flagcdn.com/w320/ve.png" alt="Venezuela flag">
+<h2>Venezuela</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 28435943</p>
+<p><strong>Capital:</strong> Caracas</p>
+</div>
+<div class="country" data-name="Belgium" data-capital="Brussels">
+<img src="https://flagcdn.com/w320/be.png" alt="Belgium flag">
+<h2>Belgium</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 11555997</p>
+<p><strong>Capital:</strong> Brussels</p>
+</div>
+<div class="country" data-name="Burkina Faso" data-capital="Ouagadougou">
+<img src="https://flagcdn.com/w320/bf.png" alt="Burkina Faso flag">
+<h2>Burkina Faso</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 20903278</p>
+<p><strong>Capital:</strong> Ouagadougou</p>
+</div>
+<div class="country" data-name="Algeria" data-capital="Algiers">
+<img src="https://flagcdn.com/w320/dz.png" alt="Algeria flag">
+<h2>Algeria</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 44700000</p>
+<p><strong>Capital:</strong> Algiers</p>
+</div>
+<div class="country" data-name="France" data-capital="Paris">
+<img src="https://flagcdn.com/w320/fr.png" alt="France flag">
+<h2>France</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 67391582</p>
+<p><strong>Capital:</strong> Paris</p>
+</div>
+<div class="country" data-name="Saint Pierre and Miquelon" data-capital="Saint-Pierre">
+<img src="https://flagcdn.com/w320/pm.png" alt="Saint Pierre and Miquelon flag">
+<h2>Saint Pierre and Miquelon</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 6069</p>
+<p><strong>Capital:</strong> Saint-Pierre</p>
+</div>
+<div class="country" data-name="Pakistan" data-capital="Islamabad">
+<img src="https://flagcdn.com/w320/pk.png" alt="Pakistan flag">
+<h2>Pakistan</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 220892331</p>
+<p><strong>Capital:</strong> Islamabad</p>
+</div>
+<div class="country" data-name="El Salvador" data-capital="San Salvador">
+<img src="https://flagcdn.com/w320/sv.png" alt="El Salvador flag">
+<h2>El Salvador</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 6486201</p>
+<p><strong>Capital:</strong> San Salvador</p>
+</div>
+<div class="country" data-name="North Macedonia" data-capital="Skopje">
+<img src="https://flagcdn.com/w320/mk.png" alt="North Macedonia flag">
+<h2>North Macedonia</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 2077132</p>
+<p><strong>Capital:</strong> Skopje</p>
+</div>
+<div class="country" data-name="Brunei" data-capital="Bandar Seri Begawan">
+<img src="https://flagcdn.com/w320/bn.png" alt="Brunei flag">
+<h2>Brunei</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 437483</p>
+<p><strong>Capital:</strong> Bandar Seri Begawan</p>
+</div>
+<div class="country" data-name="Central African Republic" data-capital="Bangui">
+<img src="https://flagcdn.com/w320/cf.png" alt="Central African Republic flag">
+<h2>Central African Republic</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 4829764</p>
+<p><strong>Capital:</strong> Bangui</p>
+</div>
+<div class="country" data-name="Uganda" data-capital="Kampala">
+<img src="https://flagcdn.com/w320/ug.png" alt="Uganda flag">
+<h2>Uganda</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 45741000</p>
+<p><strong>Capital:</strong> Kampala</p>
+</div>
+<div class="country" data-name="Wallis and Futuna" data-capital="Mata-Utu">
+<img src="https://flagcdn.com/w320/wf.png" alt="Wallis and Futuna flag">
+<h2>Wallis and Futuna</h2>
+<p><strong>Region:</strong> Oceania</p>
+<p><strong>Population:</strong> 11750</p>
+<p><strong>Capital:</strong> Mata-Utu</p>
+</div>
+<div class="country" data-name="Germany" data-capital="Berlin">
+<img src="https://flagcdn.com/w320/de.png" alt="Germany flag">
+<h2>Germany</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 83240525</p>
+<p><strong>Capital:</strong> Berlin</p>
+</div>
+<div class="country" data-name="Taiwan" data-capital="Taipei">
+<img src="https://flagcdn.com/w320/tw.png" alt="Taiwan flag">
+<h2>Taiwan</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 23503349</p>
+<p><strong>Capital:</strong> Taipei</p>
+</div>
+<div class="country" data-name="United Arab Emirates" data-capital="Abu Dhabi">
+<img src="https://flagcdn.com/w320/ae.png" alt="United Arab Emirates flag">
+<h2>United Arab Emirates</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 9890400</p>
+<p><strong>Capital:</strong> Abu Dhabi</p>
+</div>
+<div class="country" data-name="Namibia" data-capital="Windhoek">
+<img src="https://flagcdn.com/w320/na.png" alt="Namibia flag">
+<h2>Namibia</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 2540916</p>
+<p><strong>Capital:</strong> Windhoek</p>
+</div>
+<div class="country" data-name="Monaco" data-capital="Monaco">
+<img src="https://flagcdn.com/w320/mc.png" alt="Monaco flag">
+<h2>Monaco</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 39244</p>
+<p><strong>Capital:</strong> Monaco</p>
+</div>
+<div class="country" data-name="Malawi" data-capital="Lilongwe">
+<img src="https://flagcdn.com/w320/mw.png" alt="Malawi flag">
+<h2>Malawi</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 19129955</p>
+<p><strong>Capital:</strong> Lilongwe</p>
+</div>
+<div class="country" data-name="Azerbaijan" data-capital="Baku">
+<img src="https://flagcdn.com/w320/az.png" alt="Azerbaijan flag">
+<h2>Azerbaijan</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 10110116</p>
+<p><strong>Capital:</strong> Baku</p>
+</div>
+<div class="country" data-name="Mexico" data-capital="Mexico City">
+<img src="https://flagcdn.com/w320/mx.png" alt="Mexico flag">
+<h2>Mexico</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 128932753</p>
+<p><strong>Capital:</strong> Mexico City</p>
+</div>
+<div class="country" data-name="Iraq" data-capital="Baghdad">
+<img src="https://flagcdn.com/w320/iq.png" alt="Iraq flag">
+<h2>Iraq</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 40222503</p>
+<p><strong>Capital:</strong> Baghdad</p>
+</div>
+<div class="country" data-name="Cambodia" data-capital="Phnom Penh">
+<img src="https://flagcdn.com/w320/kh.png" alt="Cambodia flag">
+<h2>Cambodia</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 16718971</p>
+<p><strong>Capital:</strong> Phnom Penh</p>
+</div>
+<div class="country" data-name="Tuvalu" data-capital="Funafuti">
+<img src="https://flagcdn.com/w320/tv.png" alt="Tuvalu flag">
+<h2>Tuvalu</h2>
+<p><strong>Region:</strong> Oceania</p>
+<p><strong>Population:</strong> 11792</p>
+<p><strong>Capital:</strong> Funafuti</p>
+</div>
+<div class="country" data-name="Cook Islands" data-capital="Avarua">
+<img src="https://flagcdn.com/w320/ck.png" alt="Cook Islands flag">
+<h2>Cook Islands</h2>
+<p><strong>Region:</strong> Oceania</p>
+<p><strong>Population:</strong> 18100</p>
+<p><strong>Capital:</strong> Avarua</p>
+</div>
+<div class="country" data-name="Haiti" data-capital="Port-au-Prince">
+<img src="https://flagcdn.com/w320/ht.png" alt="Haiti flag">
+<h2>Haiti</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 11402533</p>
+<p><strong>Capital:</strong> Port-au-Prince</p>
+</div>
+<div class="country" data-name="Belize" data-capital="Belmopan">
+<img src="https://flagcdn.com/w320/bz.png" alt="Belize flag">
+<h2>Belize</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 397621</p>
+<p><strong>Capital:</strong> Belmopan</p>
+</div>
+<div class="country" data-name="French Guiana" data-capital="Cayenne">
+<img src="https://flagcdn.com/w320/gf.png" alt="French Guiana flag">
+<h2>French Guiana</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 254541</p>
+<p><strong>Capital:</strong> Cayenne</p>
+</div>
+<div class="country" data-name="DR Congo" data-capital="Kinshasa">
+<img src="https://flagcdn.com/w320/cd.png" alt="DR Congo flag">
+<h2>DR Congo</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 108407721</p>
+<p><strong>Capital:</strong> Kinshasa</p>
+</div>
+<div class="country" data-name="Equatorial Guinea" data-capital="Malabo">
+<img src="https://flagcdn.com/w320/gq.png" alt="Equatorial Guinea flag">
+<h2>Equatorial Guinea</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 1402985</p>
+<p><strong>Capital:</strong> Malabo</p>
+</div>
+<div class="country" data-name="Mauritius" data-capital="Port Louis">
+<img src="https://flagcdn.com/w320/mu.png" alt="Mauritius flag">
+<h2>Mauritius</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 1265740</p>
+<p><strong>Capital:</strong> Port Louis</p>
+</div>
+<div class="country" data-name="Austria" data-capital="Vienna">
+<img src="https://flagcdn.com/w320/at.png" alt="Austria flag">
+<h2>Austria</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 8917205</p>
+<p><strong>Capital:</strong> Vienna</p>
+</div>
+<div class="country" data-name="Spain" data-capital="Madrid">
+<img src="https://flagcdn.com/w320/es.png" alt="Spain flag">
+<h2>Spain</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 47351567</p>
+<p><strong>Capital:</strong> Madrid</p>
+</div>
+<div class="country" data-name="Russia" data-capital="Moscow">
+<img src="https://flagcdn.com/w320/ru.png" alt="Russia flag">
+<h2>Russia</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 144104080</p>
+<p><strong>Capital:</strong> Moscow</p>
+</div>
+<div class="country" data-name="Zimbabwe" data-capital="Harare">
+<img src="https://flagcdn.com/w320/zw.png" alt="Zimbabwe flag">
+<h2>Zimbabwe</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 14862927</p>
+<p><strong>Capital:</strong> Harare</p>
+</div>
+<div class="country" data-name="Singapore" data-capital="Singapore">
+<img src="https://flagcdn.com/w320/sg.png" alt="Singapore flag">
+<h2>Singapore</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 5685807</p>
+<p><strong>Capital:</strong> Singapore</p>
+</div>
+<div class="country" data-name="Czechia" data-capital="Prague">
+<img src="https://flagcdn.com/w320/cz.png" alt="Czechia flag">
+<h2>Czechia</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 10698896</p>
+<p><strong>Capital:</strong> Prague</p>
+</div>
+<div class="country" data-name="Faroe Islands" data-capital="Tórshavn">
+<img src="https://flagcdn.com/w320/fo.png" alt="Faroe Islands flag">
+<h2>Faroe Islands</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 48865</p>
+<p><strong>Capital:</strong> Tórshavn</p>
+</div>
+<div class="country" data-name="Oman" data-capital="Muscat">
+<img src="https://flagcdn.com/w320/om.png" alt="Oman flag">
+<h2>Oman</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 5106622</p>
+<p><strong>Capital:</strong> Muscat</p>
+</div>
+<div class="country" data-name="French Southern and Antarctic Lands" data-capital="Port-aux-Français">
+<img src="https://flagcdn.com/w320/tf.png" alt="French Southern and Antarctic Lands flag">
+<h2>French Southern and Antarctic Lands</h2>
+<p><strong>Region:</strong> Antarctic</p>
+<p><strong>Population:</strong> 400</p>
+<p><strong>Capital:</strong> Port-aux-Français</p>
+</div>
+<div class="country" data-name="Burundi" data-capital="Gitega">
+<img src="https://flagcdn.com/w320/bi.png" alt="Burundi flag">
+<h2>Burundi</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 11890781</p>
+<p><strong>Capital:</strong> Gitega</p>
+</div>
+<div class="country" data-name="Western Sahara" data-capital="El Aaiún">
+<img src="https://flagcdn.com/w320/eh.png" alt="Western Sahara flag">
+<h2>Western Sahara</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 510713</p>
+<p><strong>Capital:</strong> El Aaiún</p>
+</div>
+<div class="country" data-name="Mayotte" data-capital="Mamoudzou">
+<img src="https://flagcdn.com/w320/yt.png" alt="Mayotte flag">
+<h2>Mayotte</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 226915</p>
+<p><strong>Capital:</strong> Mamoudzou</p>
+</div>
+<div class="country" data-name="Puerto Rico" data-capital="San Juan">
+<img src="https://flagcdn.com/w320/pr.png" alt="Puerto Rico flag">
+<h2>Puerto Rico</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 3194034</p>
+<p><strong>Capital:</strong> San Juan</p>
+</div>
+<div class="country" data-name="San Marino" data-capital="City of San Marino">
+<img src="https://flagcdn.com/w320/sm.png" alt="San Marino flag">
+<h2>San Marino</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 33938</p>
+<p><strong>Capital:</strong> City of San Marino</p>
+</div>
+<div class="country" data-name="Turks and Caicos Islands" data-capital="Cockburn Town">
+<img src="https://flagcdn.com/w320/tc.png" alt="Turks and Caicos Islands flag">
+<h2>Turks and Caicos Islands</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 38718</p>
+<p><strong>Capital:</strong> Cockburn Town</p>
+</div>
+<div class="country" data-name="Malta" data-capital="Valletta">
+<img src="https://flagcdn.com/w320/mt.png" alt="Malta flag">
+<h2>Malta</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 525285</p>
+<p><strong>Capital:</strong> Valletta</p>
+</div>
+<div class="country" data-name="Nauru" data-capital="Yaren">
+<img src="https://flagcdn.com/w320/nr.png" alt="Nauru flag">
+<h2>Nauru</h2>
+<p><strong>Region:</strong> Oceania</p>
+<p><strong>Population:</strong> 10834</p>
+<p><strong>Capital:</strong> Yaren</p>
+</div>
+<div class="country" data-name="Saint Martin" data-capital="Marigot">
+<img src="https://flagcdn.com/w320/mf.png" alt="Saint Martin flag">
+<h2>Saint Martin</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 38659</p>
+<p><strong>Capital:</strong> Marigot</p>
+</div>
+<div class="country" data-name="French Polynesia" data-capital="Papeetē">
+<img src="https://flagcdn.com/w320/pf.png" alt="French Polynesia flag">
+<h2>French Polynesia</h2>
+<p><strong>Region:</strong> Oceania</p>
+<p><strong>Population:</strong> 280904</p>
+<p><strong>Capital:</strong> Papeetē</p>
+</div>
+<div class="country" data-name="New Zealand" data-capital="Wellington">
+<img src="https://flagcdn.com/w320/nz.png" alt="New Zealand flag">
+<h2>New Zealand</h2>
+<p><strong>Region:</strong> Oceania</p>
+<p><strong>Population:</strong> 5084300</p>
+<p><strong>Capital:</strong> Wellington</p>
+</div>
+<div class="country" data-name="Serbia" data-capital="Belgrade">
+<img src="https://flagcdn.com/w320/rs.png" alt="Serbia flag">
+<h2>Serbia</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 6908224</p>
+<p><strong>Capital:</strong> Belgrade</p>
+</div>
+<div class="country" data-name="Trinidad and Tobago" data-capital="Port of Spain">
+<img src="https://flagcdn.com/w320/tt.png" alt="Trinidad and Tobago flag">
+<h2>Trinidad and Tobago</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 1399491</p>
+<p><strong>Capital:</strong> Port of Spain</p>
+</div>
+<div class="country" data-name="Saint Barthélemy" data-capital="Gustavia">
+<img src="https://flagcdn.com/w320/bl.png" alt="Saint Barthélemy flag">
+<h2>Saint Barthélemy</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 4255</p>
+<p><strong>Capital:</strong> Gustavia</p>
+</div>
+<div class="country" data-name="Pitcairn Islands" data-capital="Adamstown">
+<img src="https://flagcdn.com/w320/pn.png" alt="Pitcairn Islands flag">
+<h2>Pitcairn Islands</h2>
+<p><strong>Region:</strong> Oceania</p>
+<p><strong>Population:</strong> 56</p>
+<p><strong>Capital:</strong> Adamstown</p>
+</div>
+<div class="country" data-name="Norfolk Island" data-capital="Kingston">
+<img src="https://flagcdn.com/w320/nf.png" alt="Norfolk Island flag">
+<h2>Norfolk Island</h2>
+<p><strong>Region:</strong> Oceania</p>
+<p><strong>Population:</strong> 2302</p>
+<p><strong>Capital:</strong> Kingston</p>
+</div>
+<div class="country" data-name="Barbados" data-capital="Bridgetown">
+<img src="https://flagcdn.com/w320/bb.png" alt="Barbados flag">
+<h2>Barbados</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 287371</p>
+<p><strong>Capital:</strong> Bridgetown</p>
+</div>
+<div class="country" data-name="South Korea" data-capital="Seoul">
+<img src="https://flagcdn.com/w320/kr.png" alt="South Korea flag">
+<h2>South Korea</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 51780579</p>
+<p><strong>Capital:</strong> Seoul</p>
+</div>
+<div class="country" data-name="Bangladesh" data-capital="Dhaka">
+<img src="https://flagcdn.com/w320/bd.png" alt="Bangladesh flag">
+<h2>Bangladesh</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 164689383</p>
+<p><strong>Capital:</strong> Dhaka</p>
+</div>
+<div class="country" data-name="Dominican Republic" data-capital="Santo Domingo">
+<img src="https://flagcdn.com/w320/do.png" alt="Dominican Republic flag">
+<h2>Dominican Republic</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 10847904</p>
+<p><strong>Capital:</strong> Santo Domingo</p>
+</div>
+<div class="country" data-name="Turkey" data-capital="Ankara">
+<img src="https://flagcdn.com/w320/tr.png" alt="Turkey flag">
+<h2>Turkey</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 84339067</p>
+<p><strong>Capital:</strong> Ankara</p>
+</div>
+<div class="country" data-name="Indonesia" data-capital="Nusantara">
+<img src="https://flagcdn.com/w320/id.png" alt="Indonesia flag">
+<h2>Indonesia</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 273523621</p>
+<p><strong>Capital:</strong> Nusantara</p>
+</div>
+<div class="country" data-name="Liberia" data-capital="Monrovia">
+<img src="https://flagcdn.com/w320/lr.png" alt="Liberia flag">
+<h2>Liberia</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 5057677</p>
+<p><strong>Capital:</strong> Monrovia</p>
+</div>
+<div class="country" data-name="Guernsey" data-capital="St. Peter Port">
+<img src="https://flagcdn.com/w320/gg.png" alt="Guernsey flag">
+<h2>Guernsey</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 62999</p>
+<p><strong>Capital:</strong> St. Peter Port</p>
+</div>
+<div class="country" data-name="Suriname" data-capital="Paramaribo">
+<img src="https://flagcdn.com/w320/sr.png" alt="Suriname flag">
+<h2>Suriname</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 586634</p>
+<p><strong>Capital:</strong> Paramaribo</p>
+</div>
+<div class="country" data-name="Albania" data-capital="Tirana">
+<img src="https://flagcdn.com/w320/al.png" alt="Albania flag">
+<h2>Albania</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 2837743</p>
+<p><strong>Capital:</strong> Tirana</p>
+</div>
+<div class="country" data-name="Dominica" data-capital="Roseau">
+<img src="https://flagcdn.com/w320/dm.png" alt="Dominica flag">
+<h2>Dominica</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 71991</p>
+<p><strong>Capital:</strong> Roseau</p>
+</div>
+<div class="country" data-name="Thailand" data-capital="Bangkok">
+<img src="https://flagcdn.com/w320/th.png" alt="Thailand flag">
+<h2>Thailand</h2>
+<p><strong>Region:</strong> Asia</p>
+<p><strong>Population:</strong> 69799978</p>
+<p><strong>Capital:</strong> Bangkok</p>
+</div>
+<div class="country" data-name="United Kingdom" data-capital="London">
+<img src="https://flagcdn.com/w320/gb.png" alt="United Kingdom flag">
+<h2>United Kingdom</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 67215293</p>
+<p><strong>Capital:</strong> London</p>
+</div>
+<div class="country" data-name="New Caledonia" data-capital="Nouméa">
+<img src="https://flagcdn.com/w320/nc.png" alt="New Caledonia flag">
+<h2>New Caledonia</h2>
+<p><strong>Region:</strong> Oceania</p>
+<p><strong>Population:</strong> 271960</p>
+<p><strong>Capital:</strong> Nouméa</p>
+</div>
+<div class="country" data-name="Romania" data-capital="Bucharest">
+<img src="https://flagcdn.com/w320/ro.png" alt="Romania flag">
+<h2>Romania</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 19286123</p>
+<p><strong>Capital:</strong> Bucharest</p>
+</div>
+<div class="country" data-name="Gibraltar" data-capital="Gibraltar">
+<img src="https://flagcdn.com/w320/gi.png" alt="Gibraltar flag">
+<h2>Gibraltar</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 33691</p>
+<p><strong>Capital:</strong> Gibraltar</p>
+</div>
+<div class="country" data-name="Svalbard and Jan Mayen" data-capital="Longyearbyen">
+<img src="https://flagcdn.com/w320/sj.png" alt="Svalbard and Jan Mayen flag">
+<h2>Svalbard and Jan Mayen</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 2562</p>
+<p><strong>Capital:</strong> Longyearbyen</p>
+</div>
+<div class="country" data-name="Angola" data-capital="Luanda">
+<img src="https://flagcdn.com/w320/ao.png" alt="Angola flag">
+<h2>Angola</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 32866268</p>
+<p><strong>Capital:</strong> Luanda</p>
+</div>
+<div class="country" data-name="Bahamas" data-capital="Nassau">
+<img src="https://flagcdn.com/w320/bs.png" alt="Bahamas flag">
+<h2>Bahamas</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 393248</p>
+<p><strong>Capital:</strong> Nassau</p>
+</div>
+<div class="country" data-name="Eswatini" data-capital="Mbabane">
+<img src="https://flagcdn.com/w320/sz.png" alt="Eswatini flag">
+<h2>Eswatini</h2>
+<p><strong>Region:</strong> Africa</p>
+<p><strong>Population:</strong> 1160164</p>
+<p><strong>Capital:</strong> Mbabane</p>
+</div>
+<div class="country" data-name="Brazil" data-capital="Brasília">
+<img src="https://flagcdn.com/w320/br.png" alt="Brazil flag">
+<h2>Brazil</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 212559409</p>
+<p><strong>Capital:</strong> Brasília</p>
+</div>
+<div class="country" data-name="Lithuania" data-capital="Vilnius">
+<img src="https://flagcdn.com/w320/lt.png" alt="Lithuania flag">
+<h2>Lithuania</h2>
+<p><strong>Region:</strong> Europe</p>
+<p><strong>Population:</strong> 2794700</p>
+<p><strong>Capital:</strong> Vilnius</p>
+</div>
+<div class="country" data-name="Saint Lucia" data-capital="Castries">
+<img src="https://flagcdn.com/w320/lc.png" alt="Saint Lucia flag">
+<h2>Saint Lucia</h2>
+<p><strong>Region:</strong> Americas</p>
+<p><strong>Population:</strong> 183629</p>
+<p><strong>Capital:</strong> Castries</p>
+</div>
+</div>
+<script>
+document.getElementById('searchInput').addEventListener('keyup', function() {
+  const searchValue = this.value.toLowerCase();
+  const countries = document.getElementsByClassName('country');
+  
+  for (let i = 0; i < countries.length; i++) {
+    const country = countries[i];
+    const name = country.getAttribute('data-name').toLowerCase();
+    const capital = country.getAttribute('data-capital').toLowerCase();
+    
+    if (name.includes(searchValue) || capital.includes(searchValue)) {
+      country.classList.remove('hidden');
+    } else {
+      country.classList.add('hidden');
+    }
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+/Users/neflor1n/CoutryList/build/CMakeFiles/main.dir
+/Users/neflor1n/CoutryList/build/CMakeFiles/edit_cache.dir
+/Users/neflor1n/CoutryList/build/CMakeFiles/rebuild_cache.dir
