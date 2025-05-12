@@ -17,7 +17,7 @@ Lihtne C++ rakendus, mis toob andmeid REST Countries API-st ja genereerib HTML-l
 
 ## Nõuded
 
-- C++17 või uuem
+- C++17
 - CMake 3.10+
 - libcurl
 - nlohmann_json
@@ -55,10 +55,6 @@ make
 3. Ava HTML-fail veebilehitsejas, et näha riikide loendit
 
 4. Kasuta otsinguriba riikide filtreerimiseks nime või pealinna järgi
-
-## Litsents
-
-See projekt on avatud lähtekoodiga ja saadaval [MIT litsentsi](LICENSE) alusel.
 
 ---
 *Viimati uuendatud: 2025-05-12*
