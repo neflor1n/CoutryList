@@ -813,9 +813,9 @@ CMakeFiles/main.dir/src/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/u8path.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/curl/curl.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/curl/curlver.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/curl/system.h \
+  /Users/neflor1n/CoutryList/vcpkg/installed/arm64-osx/include/curl/curl.h \
+  /Users/neflor1n/CoutryList/vcpkg/installed/arm64-osx/include/curl/curlver.h \
+  /Users/neflor1n/CoutryList/vcpkg/installed/arm64-osx/include/curl/system.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/socket.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/constrained_ctypes.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/machine/_param.h \
@@ -827,13 +827,13 @@ CMakeFiles/main.dir/src/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/time.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_timeval64.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_select.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/curl/easy.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/curl/multi.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/curl/urlapi.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/curl/options.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/curl/header.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/curl/websockets.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/curl/mprintf.h \
+  /Users/neflor1n/CoutryList/vcpkg/installed/arm64-osx/include/curl/easy.h \
+  /Users/neflor1n/CoutryList/vcpkg/installed/arm64-osx/include/curl/multi.h \
+  /Users/neflor1n/CoutryList/vcpkg/installed/arm64-osx/include/curl/urlapi.h \
+  /Users/neflor1n/CoutryList/vcpkg/installed/arm64-osx/include/curl/options.h \
+  /Users/neflor1n/CoutryList/vcpkg/installed/arm64-osx/include/curl/header.h \
+  /Users/neflor1n/CoutryList/vcpkg/installed/arm64-osx/include/curl/websockets.h \
+  /Users/neflor1n/CoutryList/vcpkg/installed/arm64-osx/include/curl/mprintf.h \
   /Users/neflor1n/CoutryList/vcpkg/installed/arm64-osx/include/nlohmann/json.hpp \
   /Users/neflor1n/CoutryList/vcpkg/installed/arm64-osx/include/nlohmann/adl_serializer.hpp \
   /Users/neflor1n/CoutryList/vcpkg/installed/arm64-osx/include/nlohmann/detail/abi_macros.hpp \
