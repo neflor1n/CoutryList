@@ -4,6 +4,10 @@
 
 Lihtne C++ rakendus, mis toob andmeid REST Countries API-st ja genereerib HTML-lehe, kuvades informatsiooni erinevate riikide kohta koos otsingufunktsiooniga.
 
+## Tulemuse vaatamine tavalise html-i kaudu
+
+Et näha cpp genereerimise tulemust, tuleb minna ehituskataloogi, mis sisaldab faili countries.html.
+
 ## Funktsioonid
 
 - Toob riikide andmed [REST Countries API](https://restcountries.com/v3.1/all) kaudu
