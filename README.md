@@ -1,6 +1,6 @@
 # CountryList
 
-*Language versions: [English](README.md) | [Русский](readme.ru.md) | [Eesti](readme.et.md)*
+*Language versions: [English](README.md) | [Русский](README.ru.md) | [Eesti](README.et.md)*
 
 A simple C++ application that fetches data from the REST Countries API and generates an HTML page displaying information about different countries with search functionality.
 
