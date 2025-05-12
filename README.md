@@ -4,6 +4,10 @@
 
 A simple C++ application that fetches data from the REST Countries API and generates an HTML page displaying information about different countries with search functionality.
 
+## Viewing the result via regular html
+
+To view the result of cpp generation, you need to go to the build folder, which contains the countries.html file
+
 ## Features
 
 - Fetches country data from [REST Countries API](https://restcountries.com/v3.1/all)
