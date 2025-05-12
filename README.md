@@ -17,7 +17,7 @@ A simple C++ application that fetches data from the REST Countries API and gener
 
 ## Requirements
 
-- C++17 or newer
+- C++17
 - CMake 3.10+
 - libcurl
 - nlohmann_json
@@ -55,10 +55,6 @@ make
 3. Open the HTML file in your web browser to view the list of countries
 
 4. Use the search bar to filter countries by name or capital
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ---
 *Last updated: 2025-05-12*
